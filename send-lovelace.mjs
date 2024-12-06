@@ -12,7 +12,7 @@ const toAddress = process.argv[3];
 const amount = process.argv[4];
 
 const s = new t({
-  networkId: 0,
+  networkId: 0, // 0 = testnet, 1 = mainnet https://meshjs.dev/apis/wallets/meshwallet
   fetcher: i,
   submitter: i,
   key: {

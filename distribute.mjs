@@ -17,7 +17,7 @@ const sendLovelaceWithDelay = async (recipient, delay) => {
   const i = new e(process.env.BlockFrostProjectId);
   const n = r.readFileSync(`${path.join(dir, `${recipient}.addr`)}`).toString();
   const s = new t({
-    networkId: 0,
+    networkId: 0, // 0 = testnet, 1 = mainnet https://meshjs.dev/apis/wallets/meshwallet
     fetcher: i,
     submitter: i,
     key: {
