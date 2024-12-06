@@ -1,7 +1,7 @@
 Cardano Beginner Tutorial
 =========================
 
-An easy tutorial for developing with the Cardano blockchain, creating a wallet, sending and receiving ADA.
+An easy tutorial for developing with the Cardano blockchain. Create a wallet. Send and receive ADA.
 
 ## Quick Start
 
@@ -52,7 +52,7 @@ An easy tutorial for developing with the Cardano blockchain, creating a wallet, 
     ```
     Success
     Your transaction has been successful and test funds have been sent to addr_test1<WALLET_ADDRESS>.
-    
+
     Please verify the following transaction hash: <TRANSACTION_HASH>
     ```
 7. Verify the transaction for receiving ADA at [Cardanoscan](https://preview.cardanoscan.io). Paste in the transaction hash and click on the **UTXO** tab to see the ADA transferred to the wallet. *Return tokens after use to `addr_test1vqeux7xwusdju9dvsj8h7mca9aup2k439kfmwy773xxc2hcu7zy99`.*
