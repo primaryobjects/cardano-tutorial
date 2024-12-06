@@ -20,7 +20,8 @@ An easy tutorial for developing with the Cardano blockchain. Create a wallet. Se
     ```
 3. Create an account on [BlockFrost](https://blockfrost.io/dashboard) to avoid needing to run your own local blockchain node.
 4. Create a BlockFrost project named **hello-world** on the **Cardano preview** network.
-5. Create a local wallet by running the file [generate-keys.mjs](generate-keys.mjs).
+5. Create a file `.env` with the contents `BlockFrostProjectId=<BLOCKFROST_PROJECT_ID>`. *Obtain the Project ID from your BlockFrost dashboard.*
+6. Create a local wallet by running the file [generate-keys.mjs](generate-keys.mjs).
 
     ```bash
     node generate-keys.mjs
@@ -45,7 +46,7 @@ An easy tutorial for developing with the Cardano blockchain. Create a wallet. Se
     generate-keys.mjs:42
     Creating bidder2.
     ```
-6. Get free ADA for the new wallet by using the Cardano [Faucet](https://docs.cardano.org/cardano-testnets/tools/faucet/) on **Preview Testnet**. Enter the seller's **Address** from `keys/seller.addr` *(for example, `addr_test1<WALLET_ADDRESS>`)*.
+7. Get free ADA for the new wallet by using the Cardano [Faucet](https://docs.cardano.org/cardano-testnets/tools/faucet/) on **Preview Testnet**. Enter the seller's **Address** from `keys/seller.addr` *(for example, `addr_test1<WALLET_ADDRESS>`)*.
 
     You should see output similar to the following:
 
@@ -55,8 +56,8 @@ An easy tutorial for developing with the Cardano blockchain. Create a wallet. Se
 
     Please verify the following transaction hash: <TRANSACTION_HASH>
     ```
-7. Verify the transaction for receiving ADA at [Cardanoscan](https://preview.cardanoscan.io). Paste in the transaction hash and click on the **UTXO** tab to see the ADA transferred to the wallet. *Return tokens after use to `addr_test1vqeux7xwusdju9dvsj8h7mca9aup2k439kfmwy773xxc2hcu7zy99`.*
-8. Send ADA to another wallet by using [send-lovelace.mjs](send-lovelace.mjs). *Note, amount is in **lovelace**, where 1 ADA = 1,000,000 lovelace.*
+8. Verify the transaction for receiving ADA at [Cardanoscan](https://preview.cardanoscan.io). Paste in the transaction hash and click on the **UTXO** tab to see the ADA transferred to the wallet. *Return tokens after use to `addr_test1vqeux7xwusdju9dvsj8h7mca9aup2k439kfmwy773xxc2hcu7zy99`.*
+9. Send ADA to another wallet by using [send-lovelace.mjs](send-lovelace.mjs). *Note, amount is in **lovelace**, where 1 ADA = 1,000,000 lovelace.*
 
     ```bash
     node send-lovelace.mjs <from_secret> <to_address> <amount>
@@ -67,8 +68,8 @@ An easy tutorial for developing with the Cardano blockchain. Create a wallet. Se
     ```
     Ada sent. Recipient: addr_test<TO_ADDRESS>, Tx hash: <TRANSACTION_HASH>
     ```
-9. Verify the transaction for sending ADA at [Cardanoscan](https://preview.cardanoscan.io). Paste in the transaction hash and click on the **UTXO** tab to see the ADA transferred to the wallet. *Return tokens after use to `addr_test1vqeux7xwusdju9dvsj8h7mca9aup2k439kfmwy773xxc2hcu7zy99`.*
-10. Check the balance of any of the generated wallets using [balance.mjs](balance.mjs):
+10. Verify the transaction for sending ADA at [Cardanoscan](https://preview.cardanoscan.io). Paste in the transaction hash and click on the **UTXO** tab to see the ADA transferred to the wallet. *Return tokens after use to `addr_test1vqeux7xwusdju9dvsj8h7mca9aup2k439kfmwy773xxc2hcu7zy99`.*
+11. Check the balance of any of the generated wallets using [balance.mjs](balance.mjs):
 
     ```bash
     node balance.mjs addr_test1<WALLET_ADDRESS>
@@ -80,7 +81,7 @@ An easy tutorial for developing with the Cardano blockchain. Create a wallet. Se
     Assets: {lovelace: '1000000'}
     Balance for address addr_test<WALLET_ADDRESS>: 1 ADA
     ```
-11. Confirm the wallet balance at [Cardanoscan](https://preview.cardanoscan.io) by entering the wallet address *(instead of a transaction hash)*.
+12. Confirm the wallet balance at [Cardanoscan](https://preview.cardanoscan.io) by entering the wallet address *(instead of a transaction hash)*.
 
 ## License
 
