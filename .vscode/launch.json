@@ -1,0 +1,52 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Generate wallets",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\generate-keys.mjs"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Distribute ADA",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\distribute.mjs"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Send ADA",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "args": [
+                "<sender_secret>",
+                "<recipient_address>",
+                "1000000"
+            ],
+            "program": "${workspaceFolder}\\send-lovelace.mjs"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Balance",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "args": [
+                "<address>"
+            ],
+            "program": "${workspaceFolder}\\balance.mjs"
+        }
+    ]
+}
