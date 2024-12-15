@@ -20,7 +20,14 @@ An easy tutorial for developing with the Cardano blockchain. Create a wallet. Se
     ```
 3. Create an account on [BlockFrost](https://blockfrost.io/dashboard) to avoid needing to run your own local blockchain node.
 4. Create a BlockFrost project named **hello-world** on the **Cardano preview** network.
-5. Create a file `.env` with the contents `BlockFrostProjectId=<BLOCKFROST_PROJECT_ID>`. *Obtain the Project ID from your BlockFrost dashboard.*
+5. Create a file `.env` with the contents:
+    ```
+    BlockFrostProjectId=<BLOCKFROST_PROJECT_ID>
+    SenderSecretPathName=keys/seller2.skey
+    RecipientAddress=<RECIPIENT_ADDRESS>
+    ```
+
+    *Obtain the Project ID from your BlockFrost dashboard. Create a seller2.skey by running `generate.py`.*
 6. Create a local wallet by running the file [generate-keys.mjs](generate-keys.mjs).
 
     ```bash

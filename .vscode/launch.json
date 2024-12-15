@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
             "type": "node",
             "request": "launch",
             "name": "Generate wallets",
@@ -30,8 +37,8 @@
                 "<node_internals>/**"
             ],
             "args": [
-                "<sender_secret>",
-                "<recipient_address>",
+                "<SECRET_KEY>",
+                "<RECIPIENT_ADDRESS>",
                 "1000000"
             ],
             "program": "${workspaceFolder}\\send-lovelace.mjs"
@@ -44,9 +51,17 @@
                 "<node_internals>/**"
             ],
             "args": [
-                "<address>"
+                "<RECIPIENT_ADDRESS>"
             ],
             "program": "${workspaceFolder}\\balance.mjs"
+        },
+        {
+            "name": "Metadata",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/metadata.py",
+            "args": ["<TRANSACTION_HASH>"],
+            "console": "integratedTerminal"
         }
     ]
 }
