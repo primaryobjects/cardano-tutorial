@@ -37,7 +37,7 @@
                 "<node_internals>/**"
             ],
             "args": [
-                "<SECRET_KEY>",
+                "<SENDER_SECRET_KEY>",
                 "<RECIPIENT_ADDRESS>",
                 "1000000"
             ],
@@ -61,6 +61,18 @@
             "request": "launch",
             "program": "${workspaceFolder}/metadata.py",
             "args": ["<TRANSACTION_HASH>"],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Hello World",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/helloworld.py",
+            "env": {
+                "BlockFrostProjectId": "<BLOCKFROST_PROJECT_ID>",
+                "SenderSecretPathName": "<SENDER_SECRET_KEY_PATH>",
+                "RecipientAddress": "<RECIPIENT_ADDRESS>"
+            },
             "console": "integratedTerminal"
         }
     ]
