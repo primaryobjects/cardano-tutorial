@@ -3,6 +3,8 @@ Cardano Beginner Tutorial
 
 An easy tutorial for developing with the Cardano blockchain. Create a wallet. Send and receive ADA.
 
+[https://medium.datadriveninvestor.com/creating-my-first-cardano-wallet-a-journey-into-blockchain-development-6c35d0712617?sk=53e5be550b95c9e369a6eaba12ce8c3f](Creating My First Cardano Wallet: A Journey into Blockchain Development)
+
 ## Quick Start
 
 1. Clone the [Plutus](https://github.com/IntersectMBO/plutus-tx-template.git) project to setup the code.
